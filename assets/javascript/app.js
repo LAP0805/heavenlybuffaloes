@@ -36,7 +36,7 @@ $("#wingsAdd").on("click", function(event){
   }
   else if($("#wingType").val() && $("#bonelessHowManySelect").val() && $("#wingsFlavorSelect").val() && $("#wingsQuantity").val()){
 $(".addedToCart").show()
-addBonelesstoCart()
+addBonelessToCart()
   }
   else if($("#wingType").val() && $("#veganHowManySelect").val() && $("#wingsFlavorSelect").val() && $("#wingsQuantity").val()){
     $(".addedToCart").show()
