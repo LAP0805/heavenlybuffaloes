@@ -58,7 +58,7 @@
               <!--modal body-->
               <div class="wings1">
                 <h5>Select type:</h5>
-                <form class="needs-validation" id="wingsForm" >
+                <form id="wingsForm" >
                   <select class="form-control form-control-sm" id="wingType">
                       <option value="">Select</option>
                       <option>Bone-In</option>
@@ -82,10 +82,10 @@
                         <h5>Select Amount:</h5>
                       <select class="form-control form-control-sm" id="bonelessHowManySelect">
                           <option value="">Select</option>
-                          <option data-price="8.49">.5lb - $8.49</option>
-                          <option data-price="15.99">1lb - $15.99</option>
-                          <option data-price="24.49">1.5lb - $24.49</option>
-                          <option data-price="30.99">2lb - $30.99</option>
+                          <option data-amount=".5lb" data-price="8.49">.5lb - $8.49</option>
+                          <option data-amount="1lb" data-price="15.99">1lb - $15.99</option>
+                          <option data-amount="1.5lb" data-price="24.49">1.5lb - $24.49</option>
+                          <option data amount="2lb" data-price="30.99">2lb - $30.99</option>
                       
                         </select>
                       </div>
@@ -93,9 +93,9 @@
                           <h5>Select Amount:</h5>
                         <select class="form-control form-control-sm" id="veganHowManySelect">
                             <option value="">Select</option>
-                            <option data-price="8.99">7 - $8.99</option>
-                            <option data-price="15.99">13 - $15.99</option>
-                            <option data-price="28.99">25 - $28.99</option>
+                            <option data-amount="7" data-price="8.99">7 - $8.99</option>
+                            <option data-amount="13" data-price="15.99">13 - $15.99</option>
+                            <option data-amount="25" data-price="28.99">25 - $28.99</option>
                           </select>
                         </div>
                     <div id="wingsFlavor" style="display:none">
@@ -165,7 +165,8 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class=" form friesForm">
+              <form id="friesForm">
+              <div>
                   <h5>Select type:</h5>
                   <select class="form-control form-control-sm" id="friesType">
                       <option value="">Select</option>
@@ -189,7 +190,7 @@
                     <label class="sr-only" for="inlineFormInput">Quantity:</label>
                     <input type="text" class="form-control mb-2 little" id="friesQuantity" placeholder="1">
                   </div>
-              
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="friesAdd">Add to Cart</button>
@@ -210,11 +211,36 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
+                    <form id="beerForm">
+                        <div>
+                            <h5>Select beer:</h5>
+                            <select class="form-control form-control-sm" id="beerSelect">
+                                <option value="">Select</option>
+                                <option data-price="3">Miller High Life 24oz $3</option>
+                                <option data-price="4">Miller Lite 24oz $4</option>
+                                <option data-price="4">Yuengling Lager 24oz $4</option>
+                                <option data-price="5">Dos Equis 24oz $5</option>
+                                <option data-price="5">Red Stripe 24oz $5</option>
+                                <option data-price="5">Stella Artois 24oz $5</option>
+                                <option data-price="5">Guiness 22oz $5</option>
+                                <option data-price="10">Green Fash West Coast IPA 22oz $10</option>
+                                <option data-price="10">Foothills Seeing Double IPA 22oz $10</option>
+                                <option data-price="8">Foothills Hoppyum IPA 22oz $8</option>
+                                <option data-price="8">Sierra Nevada Torpedo Extra IPA 22oz $8</option>
+                              </select>   
+                        </div>
+                        
+                          <h5>Quantity:</h5>
+                          <div class="col-auto">
+                              <label class="sr-only" for="inlineFormInput">Quantity:</label>
+                              <input type="text" class="form-control mb-2 little" id="beerQuantity" placeholder="1">
+                            </div>
+                          </form>
+                  
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="beerAdd">Add To Cart</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>
@@ -230,11 +256,32 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
+                        <form id="drinksForm">
+                            <div>
+                                <h5>Select soda:</h5>
+                                <h9>Sodas are all pure cane sugar </h9>
+                                <select class="form-control form-control-sm" id="drinksSelect">
+                                    <option value="">Select</option>
+                                    <option data-price="1.75">Coke 12oz $1.75</option>
+                                    <option data-price="1.75">Sprite 12oz $1.75</option>
+                                    <option data-price="1.75">Orange 12oz $1.75</option>
+                                    <option data-price="1.75">Grape 12oz $1.75</option>
+                                    <option data-price="1.75">Pineapple 12oz $1.75</option>
+                                    <option data-price="1">Bottled Water 16.9oz $1</option>
+                                  </select>   
+                            </div>
+                            
+                              <h5>Quantity:</h5>
+                              <div class="col-auto">
+                                  <label class="sr-only" for="inlineFormInput">Quantity:</label>
+                                  <input type="text" class="form-control mb-2 little" id="drinksQuantity" placeholder="1">
+                                </div>
+                              </form>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="drinksAdd">Add to Cart</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      
                     </div>
                   </div>
                 </div>
@@ -251,11 +298,27 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
+                        <form id="browniesForm">
+                            <div>
+                                <h5>Select type:</h5>
+                                <select class="form-control form-control-sm" id="drinksSelect">
+                                    <option value="">Select</option>
+                                    <option data-price="4">Spicy Chocolate Fudge $4</option>
+                                    <option data-price="4">Chocolate Fudge $4</option>
+                                  </select>   
+                            </div>
+                            
+                              <h5>Quantity:</h5>
+                              <div class="col-auto">
+                                  <label class="sr-only" for="inlineFormInput">Quantity:</label>
+                                  <input type="text" class="form-control mb-2 little" id="browniesQuantity" placeholder="1">
+                                </div>
+                              </form>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="browniesAdd">Add to Cart</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      
                     </div>
                   </div>
                 </div>
