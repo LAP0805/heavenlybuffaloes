@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+
+}
+.menuBar{
+    height:100px;
+    background-color:white;
+    margin:0px 0px 20px 0px;
+}
+
+.title{
+    text-align:center
+}
+.cart{
+    text-align:right;
+    
+}
+.cartInfo{
+    text-decoration:none;
+    color:black;
+}
+ 
+.jumbotron{
+    background-color:#faf6f6;
+}
+.jInner{
+    border:1px solid black;
+    text-align:center;
+    line-height:80%;
+    padding:10px;
+}
+.menuPics{
+    height:100px;
+    width:100px;
+    border-radius:10px;
+    margin:5px;
+}
+.menuItem{
+    font-size:30px;
+    border-radius:10px;
+    float:left;
+    margin:10px;
+}
+.menuItem:hover{
+background-color:  #afa7a7
+}
+.upcharge{
+    font-size:12px;
+}
+.little{
+    width: 50px;
+}
+#cartItems{
+    min-height:200px;
+    border:1px solid black;
+    margin:5px;
+    text-align:center;
+}

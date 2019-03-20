@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <title>Heavely Buffaloes - Order Online</title>
+</head>
+<body>
+  <div class="header menuBar">Site Menu</div>
+    <div class="container">
+        <div class="jumbotron">
+          <div class="cart"><a href="#"><span class="cartInfo">Go To Cart<i class="fas fa-shopping-cart"></i></span></a></div>
+            <h1 class="title">Order Online</h1>
+            <br>
+            <div class="col-sm-12">
+                <div class="jumbotron jInner">
+                    <h3>Takeout & Delivery</h3>
+                    <p>A $2 Delivery Fee Applies</p>
+                    <p>Last order time 15 minutes prior to closing</p>
+                    <h3>919.237.2358</h3>
+                    <h3>1807 W Markham Ave, Durham 27707</h3>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="menuItem"data-toggle="modal" data-target="#wingsModal"><img src="assets/images/wings/IMG_20140924_200745.jpg" class ="menuPics">Wings</div>
+                    <div class="menuItem" data-toggle="modal" data-target="#waffleModal"><img src="assets/images/wings/wafflefries.jpg" class ="menuPics">Waffle Fries</div>
+                    <div class="menuItem" data-toggle="modal" data-target="#beerModal"><img src="assets/images/wings/beer.jpg" class ="menuPics">Beer</div>
+                    <div class="menuItem" data-toggle="modal" data-target="#sodaModal"><img src="assets/images/wings/sodabottles.jpg" class ="menuPics">Drinks</div>
+                    <div class="menuItem" data-toggle="modal" data-target="#browniesModal"><img src="assets/images/wings/brownies.jpg" class ="menuPics">Brownies</div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <!--wings modal-->
+    <div class="modal fade" id="wingsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Wings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <!--modal body-->
+              <div class="wings1">
+                <h5>Select type:</h5>
+                <form class="needs-validation" id="wingsForm" >
+                  <select class="form-control form-control-sm" id="wingType">
+                      <option value="">Select</option>
+                      <option>Bone-In</option>
+                      <option>Boneless</option>
+                      <option>Vegan</option>
+                    </select>
+            
+                    <div id="boneInHowMany" style="display:none">
+                      <h5>Select Amount:</h5>
+                    <select class="form-control form-control-sm" id="wingsHowManySelect">
+                        <option value="">Select</option>
+                        <option data-amount="7" data-price="7.49">7 - $7.49</option>
+                        <option data-amount = "13" data-price="13.99">13 - $13.99</option>
+                        <option data-amount="25" data-price="25.99">25 - $25.99</option>
+                        <option data-amount="51" data-price="52.99">51 - $52.99</option>
+                        <option data-amount="103" data-price="105.99">103 - $105.99</option>
+                        <option data-amount="251" data-price="243.99">251 - $243.99</option>
+                      </select>
+                    </div>
+                    <div id="bonelessHowMany" style="display:none">
+                        <h5>Select Amount:</h5>
+                      <select class="form-control form-control-sm" id="bonelessHowManySelect">
+                          <option value="">Select</option>
+                          <option data-price="8.49">.5lb - $8.49</option>
+                          <option data-price="15.99">1lb - $15.99</option>
+                          <option data-price="24.49">1.5lb - $24.49</option>
+                          <option data-price="30.99">2lb - $30.99</option>
+                      
+                        </select>
+                      </div>
+                      <div id="veganHowMany" style="display:none">
+                          <h5>Select Amount:</h5>
+                        <select class="form-control form-control-sm" id="veganHowManySelect">
+                            <option value="">Select</option>
+                            <option data-price="8.99">7 - $8.99</option>
+                            <option data-price="15.99">13 - $15.99</option>
+                            <option data-price="28.99">25 - $28.99</option>
+                          </select>
+                        </div>
+                    <div id="wingsFlavor" style="display:none">
+                        <h5>Select Sauce:</h5>
+                      <select class="form-control form-control-sm" id="wingsFlavorSelect">
+                          <option value="">Select</option>
+                          <option>Mild</option>
+                          <option>Medium</option>
+                          <option>Hot</option>
+                          <option>Zass-hoff</option>
+                          <option>Burnie Zass-hoff</option>
+                          <option>Honey BBQ</option>
+                          <option>BBQ</option>
+                          <option>Spicy BBQ</option>
+                          <option>Chipotle BBQ</option>
+                          <option>Carolina Honey Mustard</option>
+                          <option>Garlic Garlic Garlic</option>
+                          <option>Zesty Garlic Parmesan</option>
+                          <option>Teriyaki</option>
+                          <option>Ginger & Garlic</option>
+                          <option>Sweet Thai Coconut Chili</option>
+                          <option>Ol' Vinnie (vinegar base)</option>
+                          <option>Dry - Heavely Buffalo</option>
+                          <option>Dry - Sweet Mesquite BBQ</option>
+                          <option>Dry - Garlic Parmesan</option>
+                          <option>Dry - Jerk</option>
+                          <option>Dry - Lemon Pepper</option>
+                          <option>Dry - Salt & Pepper</option>
+                          <option>Dry - Ranch</option>
+                          <option>Fancy* - Peri Peri (contains peanut oil)</option>
+                          <option>Fancy* - Jamaican Jerk</option>
+                          <option>Fancy* - Vegan Buffalo (contains coconut oil)</option>
+                        </select>
+                        <p class="upcharge">*Fancy sauce upcharge: 7 wings ($1) || 13 wings ($2) || 25 wings ($3)</p>
+                      </div>
+  
+                      <h5>Quantity:</h5>
+                      <div class="col-auto">
+                          <label class="sr-only" for="inlineFormInput">Quantity:</label>
+                          <input type="text" class="form-control mb-2 little" id="wingsQuantity" value="1" placeholder="1">
+                        
+                        </form>
+
+                         </div>
+                         <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
+                         <div class="selectFields" style="display:none; color:red">Please select all fields</div>
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="submit" form="wingsForm" class="btn btn-primary" id="wingsAdd">Add to Cart</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--waffle fries modal-->
+      <div class="modal fade" id="waffleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Waffle Fries</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class=" form friesForm">
+                  <h5>Select type:</h5>
+                  <select class="form-control form-control-sm" id="friesType">
+                      <option value="">Select</option>
+                      <option value="1">Idaho - Plain</option>
+                      <option value="2">Sweet Potato - Plain</option>
+                      <option value="3">Idaho - Dry Rubbed</option>
+                      <option value="4">Sweet Potato - Dry Rubbed</option>
+                    </select>   
+              </div>
+              <div id="friesHowMany" style="display:none">
+                  <h5>Select Amount:</h5>
+                <select class="form-control form-control-sm" id="friesHowManySelect">
+                    <option value="">Select</option>
+                    <option value="1" data-price="2.99">Half - $2.99</option>
+                    <option value="2" data-price="4.99">Full - $4.99</option>
+                    
+                  </select>
+                </div>
+                <h5>Quantity:</h5>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Quantity:</label>
+                    <input type="text" class="form-control mb-2 little" id="friesQuantity" placeholder="1">
+                  </div>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="friesAdd">Add to Cart</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <!--beer modal-->
+        <div class="modal fade" id="beerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Beer</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--beverages modal-->
+            <div class="modal fade" id="sodaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Beverages</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                 <!--brownies modal-->
+            <div class="modal fade" id="browniesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Brownies</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+
+
+                <div class="container">
+                    <div class="jumbotron">
+                        <h1 class="title">Cart <i class="fas fa-shopping-cart"></i></h1>
+                        
+                                <div class="jumbotron jInner">
+                                       
+                                    <div class="row">
+                                        <div class="col-sm-3"></div>
+                                         <div class=" col-sm-6" id="cartItems">
+                                            <h5>Items:</h5>
+
+                                            <table style="width:100%" class="table-striped" id="cartTable">
+                                              <tr>
+                                                <th>Item</th>
+                                                <th>quantity</th>
+                                                <th>price</th>
+                                              </tr>
+
+                                            
+                                            
+                                            
+                                            
+                                            </table>
+                                         </div>
+                                         <div class="col-sm-3">
+                                         </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-sm-3"></div>
+                                            <div class=" col-sm-6" id="cartTotal">
+                                               <h5>Total:</h5>
+                                               <p class="totalHere"></p>
+                                            </div>
+                                            <div class="col-sm-3"></div>
+            
+                                    </div>
+                    
+                
+                                
+                            </div>
+                    </div>
+                </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="assets/javascript/app.js"></script>
+</body>
+</html>
