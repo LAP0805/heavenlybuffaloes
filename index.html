@@ -147,7 +147,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" form="wingsForm" class="btn btn-primary" id="wingsAdd">Add to Cart</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
               
             </div>
           </div>
@@ -170,31 +170,34 @@
                   <h5>Select type:</h5>
                   <select class="form-control form-control-sm" id="friesType">
                       <option value="">Select</option>
-                      <option value="1">Idaho - Plain</option>
-                      <option value="2">Sweet Potato - Plain</option>
-                      <option value="3">Idaho - Dry Rubbed</option>
-                      <option value="4">Sweet Potato - Dry Rubbed</option>
+                      <option>Idaho - Plain</option>
+                      <option>Sweet Potato - Plain</option>
+                      <option>Idaho - Dry Rubbed</option>
+                      <option>Sweet Potato - Dry Rubbed</option>
                     </select>   
               </div>
               <div id="friesHowMany" style="display:none">
                   <h5>Select Amount:</h5>
                 <select class="form-control form-control-sm" id="friesHowManySelect">
                     <option value="">Select</option>
-                    <option value="1" data-price="2.99">Half - $2.99</option>
-                    <option value="2" data-price="4.99">Full - $4.99</option>
+                    <option data-amount="Half" data-price="2.99">Half - $2.99</option>
+                    <option data-amount="Full" data-price="4.99">Full - $4.99</option>
                     
                   </select>
                 </div>
                 <h5>Quantity:</h5>
                 <div class="col-auto">
                     <label class="sr-only" for="inlineFormInput">Quantity:</label>
-                    <input type="text" class="form-control mb-2 little" id="friesQuantity" placeholder="1">
+                    <input type="text" class="form-control mb-2 little" id="friesQuantity"value="1" placeholder="1">
                   </div>
                 </form>
+                <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
+            <div class="selectFields" style="display:none; color:red">Please select all fields</div>
             </div>
+            
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="friesAdd">Add to Cart</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
               
             </div>
           </div>
@@ -236,11 +239,12 @@
                               <input type="text" class="form-control mb-2 little" id="beerQuantity" placeholder="1">
                             </div>
                           </form>
-                  
+                          <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
+                          <div class="selectFields" style="display:none; color:red">Please select all fields</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="beerAdd">Add To Cart</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
