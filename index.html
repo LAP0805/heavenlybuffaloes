@@ -219,24 +219,24 @@
                             <h5>Select beer:</h5>
                             <select class="form-control form-control-sm" id="beerSelect">
                                 <option value="">Select</option>
-                                <option data-price="3">Miller High Life 24oz $3</option>
-                                <option data-price="4">Miller Lite 24oz $4</option>
-                                <option data-price="4">Yuengling Lager 24oz $4</option>
-                                <option data-price="5">Dos Equis 24oz $5</option>
-                                <option data-price="5">Red Stripe 24oz $5</option>
-                                <option data-price="5">Stella Artois 24oz $5</option>
-                                <option data-price="5">Guiness 22oz $5</option>
-                                <option data-price="10">Green Fash West Coast IPA 22oz $10</option>
-                                <option data-price="10">Foothills Seeing Double IPA 22oz $10</option>
-                                <option data-price="8">Foothills Hoppyum IPA 22oz $8</option>
-                                <option data-price="8">Sierra Nevada Torpedo Extra IPA 22oz $8</option>
+                                <option data-size="24oz" data-price="3">Miller High Life 24oz $3</option>
+                                <option data-size="24oz" data-price="4">Miller Lite 24oz $4</option>
+                                <option data-size="24oz" data-price="4">Yuengling Lager 24oz $4</option>
+                                <option data-size="24oz" data-price="5">Dos Equis 24oz $5</option>
+                                <option data-size="24oz" data-price="5">Red Stripe 24oz $5</option>
+                                <option data-size="24oz" data-price="5">Stella Artois 24oz $5</option>
+                                <option data-size="22oz" data-price="5">Guiness 22oz $5</option>
+                                <option data-size="22oz" data-price="10">Green Fash West Coast IPA 22oz $10</option>
+                                <option data-size="22oz" data-price="10">Foothills Seeing Double IPA 22oz $10</option>
+                                <option data-size="22oz" data-price="8">Foothills Hoppyum IPA 22oz $8</option>
+                                <option data-size="22oz" data-price="8">Sierra Nevada Torpedo Extra IPA 22oz $8</option>
                               </select>   
                         </div>
                         
                           <h5>Quantity:</h5>
                           <div class="col-auto">
                               <label class="sr-only" for="inlineFormInput">Quantity:</label>
-                              <input type="text" class="form-control mb-2 little" id="beerQuantity" placeholder="1">
+                              <input type="text" class="form-control mb-2 little" id="beerQuantity" value="1" placeholder="1">
                             </div>
                           </form>
                           <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
@@ -266,25 +266,27 @@
                                 <h9>Sodas are all pure cane sugar </h9>
                                 <select class="form-control form-control-sm" id="drinksSelect">
                                     <option value="">Select</option>
-                                    <option data-price="1.75">Coke 12oz $1.75</option>
-                                    <option data-price="1.75">Sprite 12oz $1.75</option>
-                                    <option data-price="1.75">Orange 12oz $1.75</option>
-                                    <option data-price="1.75">Grape 12oz $1.75</option>
-                                    <option data-price="1.75">Pineapple 12oz $1.75</option>
-                                    <option data-price="1">Bottled Water 16.9oz $1</option>
+                                    <option data-size="12oz" data-price="1.75">Coke 12oz $1.75</option>
+                                    <option data-size="12oz" data-price="1.75">Sprite 12oz $1.75</option>
+                                    <option data-size="12oz" data-price="1.75">Orange 12oz $1.75</option>
+                                    <option data-size="12oz" data-price="1.75">Grape 12oz $1.75</option>
+                                    <option data-size="12oz" data-price="1.75">Pineapple 12oz $1.75</option>
+                                    <option data-size="16.9oz" data-price="1">Bottled Water 16.9oz $1</option>
                                   </select>   
                             </div>
                             
                               <h5>Quantity:</h5>
                               <div class="col-auto">
                                   <label class="sr-only" for="inlineFormInput">Quantity:</label>
-                                  <input type="text" class="form-control mb-2 little" id="drinksQuantity" placeholder="1">
+                                  <input type="text" class="form-control mb-2 little" id="drinksQuantity" value="1" placeholder="1">
                                 </div>
                               </form>
+                              <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
+                          <div class="selectFields" style="display:none; color:red">Please select all fields</div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" id="drinksAdd">Add to Cart</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
                       
                     </div>
                   </div>
@@ -305,7 +307,7 @@
                         <form id="browniesForm">
                             <div>
                                 <h5>Select type:</h5>
-                                <select class="form-control form-control-sm" id="drinksSelect">
+                                <select class="form-control form-control-sm" id="browniesSelect">
                                     <option value="">Select</option>
                                     <option data-price="4">Spicy Chocolate Fudge $4</option>
                                     <option data-price="4">Chocolate Fudge $4</option>
@@ -315,13 +317,15 @@
                               <h5>Quantity:</h5>
                               <div class="col-auto">
                                   <label class="sr-only" for="inlineFormInput">Quantity:</label>
-                                  <input type="text" class="form-control mb-2 little" id="browniesQuantity" placeholder="1">
+                                  <input type="text" class="form-control mb-2 little" id="browniesQuantity" value="1" placeholder="1">
                                 </div>
                               </form>
+                              <div class="addedToCart" style="display:none; color:green">Order added to Cart</div>
+                          <div class="selectFields" style="display:none; color:red">Please select all fields</div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" id="browniesAdd">Add to Cart</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
                       
                     </div>
                   </div>
@@ -347,11 +351,6 @@
                                                 <th>quantity</th>
                                                 <th>price</th>
                                               </tr>
-
-                                            
-                                            
-                                            
-                                            
                                             </table>
                                          </div>
                                          <div class="col-sm-3">
@@ -361,7 +360,7 @@
                                             <div class="col-sm-3"></div>
                                             <div class=" col-sm-6" id="cartTotal">
                                                <h5>Total:</h5>
-                                               <p class="totalHere"></p>
+                                               <p id="totalHere"></p>
                                             </div>
                                             <div class="col-sm-3"></div>
             

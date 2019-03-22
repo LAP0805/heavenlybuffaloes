@@ -43,6 +43,15 @@ $("#friesAdd").on("click", function(event){
   addFriesToCart();
 })
 
+$("#beerAdd, #drinksAdd, #browniesAdd").on("click", function(event){
+  $(".selectFields").hide()
+  $(".addedToCart").hide()
+  event.preventDefault();
+  addBeerDrinksBrownies();
+  
+})
+
+
 
 
 function addWingsToCart() {
@@ -85,7 +94,7 @@ function addWingsToCart() {
   })
 
   
-  $("#cartTotal").text("$" + sum)
+  $("#totalHere").text("$" + sum)
   $("#wingsForm").trigger("reset");
 
 }
@@ -127,6 +136,58 @@ let sum = 0;
   
 
 
-$("#cartTotal").text("$" + sum)
+$("#totalHere").text("$" + sum)
 $("#friesForm").trigger("reset");
+}
+
+
+function addBeerDrinksBrownies(){
+let amount;
+let price;
+if ($("#beerSelect").val()){
+amount = $("#beerQuantity").val()
+price = $("#beerSelect").find(":selected").data("price")
+}
+else if($("#drinksSelect").val()){
+  amount= $("#drinksQuantity").val()
+  price = $("#drinksSelect").find(":selected").data("price")
+}
+else if($("#browniesSelect").val()){
+   amount = $("#browniesQuantity").val()
+   price = $("#browniesSelect").find(":selected").data("price")
+}
+else {
+  return $(".selectFields").show();
+}
+$(".addedToCart").show()
+let newRow = $("<tr>")
+console.log(price)
+let priceCell = $("<td>" + (price * amount) + "</td>")
+priceCell.attr("class", "itemPrice")
+if($("#beerSelect").val()){
+  newRow.append("<td>" + $("#beerSelect").val() +"</td>")
+}
+if($("#drinksSelect").val()){
+  newRow.append("<td>" + $("#drinksSelect").val() + "("+$("#drinksSelect").find(":selected").data("size") +")</td>")
+}
+if($("#browniesSelect").val()){
+  newRow.append("<td>" + $("#browniesSelect").val() +"</td>")
+}
+let quantityCell = $("<td>" + amount + "</td>")
+newRow.append(quantityCell)
+newRow.append(priceCell)
+$("#cartTable").append(newRow)
+let sum = 0;
+  $(".itemPrice").each(function(){
+    var value = $(this).text();
+    if (!isNaN(value) && value.length != 0) {
+      sum += Math.round(value * 100) / 100
+    }
+    sum =  Math.round(sum * 100) / 100
+  })
+ 
+$("#totalHere").text("$" + sum)
+$("#drinksForm").trigger("reset");
+$("#beerForm").trigger("reset");
+$("#browniesForm").trigger("reset");
 }
