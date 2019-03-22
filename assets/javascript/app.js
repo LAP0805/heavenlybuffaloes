@@ -27,6 +27,11 @@ $("#friesType").on("change", function () {
 $(".dismiss").on("click", function(){
   $(".selectFields").hide()
   $(".addedToCart").hide()
+  $("#drinksForm").trigger("reset");
+$("#beerForm").trigger("reset");
+$("#browniesForm").trigger("reset");
+$("#wingsForm").trigger("reset");
+$("#friesForm").trigger("reset");
 })
 
 $("#wingsAdd").on("click", function (event) {
@@ -92,9 +97,13 @@ function addWingsToCart() {
     }
     sum =  Math.round(sum * 100) / 100
   })
-
-  
+  let salesTax = sum * 0.0475
+  salesTax = Math.round(salesTax* 100) / 100
+  let total = sum + salesTax;
+  total = Math.round(total* 100) / 100
   $("#totalHere").text("$" + sum)
+  $("#taxHere").text("$"+ salesTax);
+  $("#bigTotalHere").text("$" + total)
   $("#wingsForm").trigger("reset");
 
 }
@@ -116,7 +125,6 @@ else{
 }
 $(".addedToCart").show()
 let newRow = $("<tr>")
-console.log(price)
 let priceCell = $("<td>" + (price * amount) + "</td>")
 priceCell.attr("class", "itemPrice")
 newRow.append("<td>" + $("#friesType").val() + "("+$("#friesHowManySelect").find(":selected").data("amount") +")</td>")
@@ -132,11 +140,13 @@ let sum = 0;
     }
     sum =  Math.round(sum * 100) / 100
   })
- 
-  
-
-
+  let salesTax = sum * 0.0475
+  salesTax = Math.round(salesTax* 100) / 100
+let total = sum + salesTax;
+total = Math.round(total* 100) / 100
 $("#totalHere").text("$" + sum)
+$("#taxHere").text("$"+ salesTax);
+$("#bigTotalHere").text("$" + total)
 $("#friesForm").trigger("reset");
 }
 
@@ -185,8 +195,13 @@ let sum = 0;
     }
     sum =  Math.round(sum * 100) / 100
   })
- 
+ let salesTax = sum * 0.0475
+ salesTax = Math.round(salesTax* 100) / 100
+let total = sum + salesTax;
+total = Math.round(total* 100) / 100
 $("#totalHere").text("$" + sum)
+$("#taxHere").text("$"+ salesTax);
+$("#bigTotalHere").text("$" + total)
 $("#drinksForm").trigger("reset");
 $("#beerForm").trigger("reset");
 $("#browniesForm").trigger("reset");
